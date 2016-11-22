@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/code-online.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row backtotheory">
+                <a href="trangchu.html">Techmaster</a>
+            </div>
+            <div class="row content">
+                <div class="col-sm-3" id ="excersies">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    HTML Elements và Attributes
+                                </h4>
+                            </div>
+                            <div id="excersice" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <span>Bài tập</span><br/><br/>
+
+                                    Tạo một trang HTML trình bày một bài viết từ 3 - 5 đoạn văn.<br/><br/>
+
+                                    <span>Yêu cầu</span><br/><br/>
+
+                                    - Bài viết phải có nội dung thực sự<br/>
+
+                                    - Có sử dụng các thẻ heading (ít nhất 3 thẻ), paragraph, các thẻ format text, special characters<br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="window.location.href = 'learn-online.html'" type="button" class="btn btn-info btn-lg" id="btn-excer">Học lý thuyết</button>
+                </div>
+
+                <div class="col-sm-4 code_area">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#html">index.html</a></li>
+                        <li><a data-toggle="tab" href="#css">style.css</a></li>
+                        <li><a data-toggle="tab" href="#js">script.js</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="html" class="tab-pane fade in active CodeMirror-scroll"></div>
+                        <div id="css" class="tab-pane fade CodeMirror-scroll"></div>
+                        <div id="js" class="tab-pane fade CodeMirror-scroll"></div>
+                    </div>
+                    <div id="run_code">
+                        <button id="runCode">RUN</button>
+                    </div>
+                </div>
+                <div class="col-sm-5" id="result_code">
+                    <iframe id ="result_ifr"></iframe>
+                </div>
+            </div>
+        </div>
+        <script src="css_learn_online/ace-builds/src-noconflict/ace.js" 
+                type="text/javascript" charset="utf-8">
+        </script>
+        <script>
+            var html = ace.edit("html");
+            html.setTheme("ace/theme/monokai");
+            html.getSession().setMode("ace/mode/html");
+            var css = ace.edit("css");
+            css.setTheme("ace/theme/monokai");
+            css.getSession().setMode("ace/mode/css");
+            var js = ace.edit("js");
+            js.setTheme("ace/theme/monokai");
+            js.getSession().setMode("ace/mode/javascript");
+
+            $(document).ready(function () {
+                $("#runCode").click(function () {
+                    var content = $("#html div.ace_content").text();
+                    var $iframe = $('#result_ifr');
+                    $iframe.ready(function () {
+                        $iframe.contents().find("body").empty().append(content);
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
+

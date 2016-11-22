@@ -1,0 +1,177 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 25, 2016, 9:59:30 AM
+    Author     : DO KIEN
+*/
+
+.course-description ul li {
+    list-style-type: square;
+    list-style-position: inside;
+}
+div.course-description{
+    padding: 0px 22px;
+}
+div.modal-body{
+    font-size: 20px;
+}
+
+.card a{
+    font-size: 22px;
+    text-decoration: none;
+}
+
+#header1  {
+    height: 0px;
+    border-bottom: none;
+    padding: 0px;
+}
+#header .close{
+    margin-top: 4px;
+}
+.panel-title{
+    font-size: 26px;
+}
+div.modal-footer.footer_c{
+    border-top:none;
+}
+
+#name, #email{
+    display: inherit;
+    margin-bottom: 12px;
+}
+.course-description2 div.form-group{
+    margin-top: 30px;
+}
+
+#register .panel-heading h4 a{
+    text-decoration: none;
+}
+
+#collapse2 .card-header{
+    font-size: 22px;
+    color:#337ab7;
+}
+.panel-default>.panel-heading
+{
+    background-color: #1ABC9C;
+}
+div#learn_registration{
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+.collection .collection-item.avatar .circle {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.lessonNumber, .courseLessonTitle{
+    font-weight: 500;
+}
+.lessonNumber{
+    display: inline-block;
+    border-right: 2px solid #F0F0F0;
+    padding-right: 5px;
+    line-height: 15px;
+}
+fieldset label{
+    font-size: 15px;
+}
+#footer{
+    margin-top: 10px;
+}
+
+div.courseLesson_rel{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5px;
+    padding-top: 8px;
+    text-align: center;
+}
+div.courseLesson_rel a{
+    text-decoration: none;
+}
+
+.course-relative{
+    background-color: white;
+    border-radius: 5px;
+}
+.course-relative h3{
+    margin-top: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 7px;
+}
+div.courseLesson_rel img{
+    width:62px;
+    border-radius: 50%;
+}
+div.courseLesson_rel p{
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    color: #1ABC9C;
+}
+
+@media screen and (max-width: 767px) {
+    .courseIcon1{
+        width: 65px;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .courseDescription2{
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        text-align: center;
+    }
+    div.courseDescription_details{
+        clear: both;
+        text-align: center;
+    }
+    img.courseIcon1{
+        float: none;
+        margin: auto;
+    }
+    div.courseOverview.block1{
+        padding-top: 18px;
+        margin-left: -32px;
+        margin-right: -18px;
+    }
+    div.courseLessons.block1{
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 650px){
+    .block1{
+        width: auto;
+    }
+    div.col-sm-9{
+        width: auto;
+    }
+    div.col-sm-3.course-relative{
+        width: 50%;
+        margin-top: 10px;
+        margin-left: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    div.modal-dialog.course_d{
+        width: 650px;
+    }
+}

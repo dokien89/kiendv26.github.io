@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>User</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/student.css" type="text/css">
+        <link rel="stylesheet" href="css_learn_online/font-awesome-4.6.3/css/font-awesome.min.css">
+        <script src="js/student_script.js"></script>
+    </head>
+    <body>
+        <div id="header" class="containers">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="trangchu.html">Trang chủ</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                        <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown notifications-menu" data-reactid=".0.0.0.0.2.0.0"><a id="notify-link-icon" href="#" class="dropdown-toggle" data-toggle="dropdown" data-reactid=".0.0.0.0.2.0.0.0"><i class="fa fa-bell-o" data-reactid=".0.0.0.0.2.0.0.0.0"></i><span class="label label-warning" id="notify-number" data-reactid=".0.0.0.0.2.0.0.0.1">34</span></a>
+                                <!--                                <ul class="dropdown-menu" data-reactid=".0.0.0.0.2.0.0.1">
+                                                                    <li class="header" data-reactid=".0.0.0.0.2.0.0.1.0">Thông báo</li><li data-reactid=".0.0.0.0.2.0.0.1.1"><div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 400px;"><ul class="menu" id="notify-menu" data-reactid=".0.0.0.0.2.0.0.1.1.0" style="overflow: hidden; width: auto; height: 400px;"></ul><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div></li><li class="footer" data-reactid=".0.0.0.0.2.0.0.1.2"><a href="/user/notify" data-reactid=".0.0.0.0.2.0.0.1.2.0">Xem tất cả</a></li></ul>-->
+                            </li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+
+        <div class="container-fluid text-center">
+            <div class="row content">
+                <div class="col-sm-2 sidenav">
+                    <nav class="navbar navbar-default sidebar" role="navigation">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>      
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li id="mycourse_li" class="sidebar_link"><a href="#">Khóa học của bạn<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-book"></span></a></li>
+                                    <li id="report_li"   class="sidebar_link "><a href="#">Thông báo<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-bell"></span></a></li>
+                                    <li id="record_li"   class="sidebar_link"><a href="#">Hồ sơ cá nhân<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>        
+                                    <li id="cert_li"     class="sidebar_link"><a href="#">Chứng chỉ<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-certificate"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-10 text-left">
+                    <div class="container" id="content">
+                        <div class="row" id ="mycourse">
+                            <h3>Khóa học của bạn</h3>
+                            <div class="col-sm-4 courseItem block noPadding sp">
+                                <a href="learn-online.html">
+                                    <img class="img-responsive courseIcon" src="img/1051.png" alt="C++ Tutorial">
+                                    <div class="courseDescription">
+                                        <div>C++ Tutorial</div>
+                                        <p>
+                                            Our C++ tutorial covers basic concepts, data types, arrays, pointers, conditional statements, loops, functions, classes, objects, inheritance, and polymorphism.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-4 courseItem block noPadding sp">
+                                <a href="learn-online.html">
+                                    <img class="img-responsive courseIcon" src="img/1059.png" alt="C++ Tutorial">
+                                    <div class="courseDescription">
+                                        <div>PHP Tutorial</div>
+                                        <p>
+                                            PHP enables you to create dynamic web pages, develop websites, and generate dynamic content. Learn the most widely used web programming language!
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-4 courseItem block noPadding sp">
+                                <a href="learn-online.html">
+                                    <img class="img-responsive courseIcon" src="img/1073.png" alt="C++ Tutorial">
+                                    <div class="courseDescription">
+                                        <div>Python 3 Tutorial</div>
+                                        <p>
+                                            Learn Python, one of today's most in-demand programming languages on-the-go! Practice writing Python code, collect points, &amp; show off your skills now!
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="report" class="row white z-depth-1">
+                            <h3>Thông báo</h3>
+                            <ul class="list-notification">
+                                <li class="notification-item">
+                                    <div class="clearfix">
+                                        <div class="notification-img">
+                                            <img class="noti-img" src="img/NgoVietKhiem.jpg">
+                                        </div>
+                                        <div class="notification-text ">
+                                            <span class="main-notification">
+                                                <strong>Hoang Ngoc Son</strong> vừa hoàn thành bài học <strong>Javascript và cách sử dụng trên trang HTML</strong> của khóa học <strong>Web cơ bản HTML5, CSS3 và Javascript</strong>
+                                            </span>
+                                            <p>
+                                                <sub>6 phút trước</sub>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <div class="clearfix">
+                                        <div class="notification-img">
+                                            <img class="noti-img img-responsive" src="img/NguyenMinhThuc.jpg">
+                                        </div>
+                                        <div class="notification-text ">
+                                            <span class="main-notification">
+                                                <strong>Hoang Ngoc Son</strong> vừa hoàn thành bài học <strong>Sizing - Tinh chỉnh kích thước</strong> của khóa học <strong>Web cơ bản HTML5, CSS3 và Javascript</strong>
+                                            </span>
+                                            <p>
+                                                <sub>28 phút trước</sub>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <div class="clearfix">
+                                        <div class="notification-img">
+                                            <img class="noti-img" src="img/NguyenThanhTrung.jpg">
+                                        </div>
+                                        <div class="notification-text ">
+                                            <span class="main-notification">
+                                                <strong>Hoang Ngoc Son</strong> vừa hoàn thành bài học <strong>Div, span và thuộc tính Float</strong> của khóa học <strong>Web cơ bản HTML5, CSS3 và Javascript</strong>
+                                            </span>
+                                            <p>
+                                                <sub>43 phút trước</sub>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <div class="clearfix">
+                                        <div class="notification-img">
+                                            <img class="noti-img" src="img/NguyenThanhTrung.jpg">
+                                        </div>
+                                        <div class="notification-text ">
+                                            <span class="main-notification">
+                                                <strong>Nguyễn Thành Nam</strong> vừa đạt điểm <strong>8</strong> cùng nhận xét: <strong>Cần phải cố gắng hơn để được điểm cao hơn</strong> cho bài tập <strong><a href="/khoa-hoc-online/25487/web-co-ban-html5-css3-va-javascript/1887/Document-Object-Model">Document Object Model</a></strong>
+                                            </span>
+                                            <p>
+                                                <sub>1 tiếng trước</sub>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <div class="clearfix">
+                                        <div class="notification-img">
+                                            <img class="noti-img" src="img/NguyenThanhTrung.jpg">
+                                        </div>
+                                        <div class="notification-text ">
+                                            <span class="main-notification">
+                                                <strong>Hà Quốc Việt</strong> vừa đạt điểm <strong>4</strong> cùng nhận xét: <strong>Bài này sử dụng 1 số kỹ thuật cao cấp, tuy nhiên yêu cầu đề bài thì chưa thực hiện đúng. Không có giới hạn kích thước ảnh, không dùng link mà lại dùng sự kiện onclick, di chuột lên ảnh hiện hình mũi tên tạo cảm giác không bấm vào được.</strong> cho bài tập <strong><a href="/khoa-hoc-online/25487/web-co-ban-html5-css3-va-javascript/2118/BT-Thuc-hanh-Link-Image">BT: Thực hành Link + Image</a></strong>
+                                            </span>
+                                            <p>
+                                                <sub>14 tiếng trước</sub>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <div class="clearfix">
+                                        <div class="notification-img">
+                                            <img class="noti-img" src="img/NguyenThanhTrung.jpg">
+                                        </div>
+                                        <div class="notification-text ">
+                                            <span class="main-notification">
+                                                <strong>Hà Quốc Việt</strong> vừa hoàn thành bài học <strong>Làm quen với Photoshop</strong> của khóa học <strong>Web cơ bản HTML5, CSS3 và Javascript</strong>
+                                            </span>
+                                            <p>
+                                                <sub>15 tiếng trước</sub>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <div class="clearfix">
+                                        <div class="notification-img">
+                                            <img class="noti-img" src="img/NguyenThanhTrung.jpg">
+                                        </div>
+                                        <div class="notification-text ">
+                                            <span class="main-notification">
+                                                <strong>Hà Quốc Việt</strong> vừa hoàn thành bài học <strong>Cross Browser compatibility phần 1</strong> của khóa học <strong>Web cơ bản HTML5, CSS3 và Javascript</strong>
+                                            </span>
+                                            <p>
+                                                <sub>15 tiếng trước</sub>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <div class="clearfix">
+                                        <div class="notification-img">
+                                            <img class="noti-img" src="img/NguyenThanhTrung.jpg">
+                                        </div>
+                                        <div class="notification-text ">
+                                            <span class="main-notification">
+                                                <strong>Hà Quốc Việt</strong> Cập nhật lại bài tập <strong><a href="http://techmaster.vn/admin/courses/lesson/25487/preview/2118/preview">BT: Thực hành Link + Image</a></strong> của khóa học <strong>Web cơ bản HTML5, CSS3 và Javascript</strong>
+                                            </span>
+                                            <p>
+                                                <sub>1 ngày trước</sub>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <div class="clearfix">
+                                        <div class="notification-img">
+                                            <img class="noti-img" src="img/NguyenThanhTrung.jpg">
+                                        </div>
+                                        <div class="notification-text ">
+                                            <span class="main-notification">
+                                                <strong>Hà Quốc Việt</strong> vừa đạt điểm <strong>1</strong> cùng nhận xét: <strong>Nộp lại bài tập bằng link github.io</strong> cho bài tập <strong><a href="/khoa-hoc-online/25487/web-co-ban-html5-css3-va-javascript/2118/BT-Thuc-hanh-Link-Image">BT: Thực hành Link + Image</a></strong>
+                                            </span>
+                                            <p>
+                                                <sub>1 ngày trước</sub>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification-item">
+                                    <div class="clearfix">
+                                        <div class="notification-img">
+                                            <img class="noti-img" src="img/NguyenThanhTrung.jpg">
+                                        </div>
+                                        <div class="notification-text ">
+                                            <span class="main-notification">
+                                                <strong>Hà Quốc Việt</strong> Cập nhật lại bài tập <strong><a href="http://techmaster.vn/admin/courses/lesson/25487/preview/2118/preview">BT: Thực hành Link + Image</a></strong> của khóa học <strong>Web cơ bản HTML5, CSS3 và Javascript</strong>
+                                            </span>
+                                            <p>
+                                                <sub>1 ngày trước</sub>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <div class="pagination">
+                                    <ul class="pagination">
+                                        <li class="previous disabled">
+                                            <a href="#">
+                                                «
+                                            </a>
+                                        </li><li class="active"><a href="/user/notify/page/1">1</a></li><li class=""><a href="/user/notify/page/2">2</a></li><li class=""><a href="/user/notify/page/3">3</a></li><li class=""><a href="/user/notify/page/4">4</a></li><li class=""><a href="/user/notify/page/5">5</a></li><li><a href="/user/notify/page/2">...</a></li><li class="next ">
+                                            <a href="/user/notify/page/20">
+                                                »
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="row" id="record">
+                            <h3>Hồ sơ</h3>
+                            <div class="container">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label for="exampleInputFile" class="col-sm-3 control-label image_input">Ảnh đại diện</label>
+                                        <img id="img_avatar" src="img/user.jpg">
+                                        <label class="btn btn-default btn-file">
+                                            Chọn ảnh đại diện <input type="file" style="display: none;">
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email1" class="col-sm-3 control-label">Họ và tên</label>
+                                        <div class="col-sm-3">
+                                            <input type="email" class="form-control inputstl" id="email1" value="Đỗ Văn Kiên">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="container">
+
+                                                <!-- Trigger the modal with a button -->
+                                                <button type="button" class="btn btn-default btn-file chinhsua" data-toggle="modal" data-target="#edit_fullname">Chỉnh sửa</button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="edit_fullname" role="dialog">
+                                                    <div class="modal-dialog">
+
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+
+                                                            <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <label for="email">Họ và tên:</label>
+                                                                    <input type="email" class="form-control" id="email">
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-info" data-dismiss="modal">Đóng</button>
+                                                                <button type="button" class="btn btn-info" data-dismiss="modal">Lưu</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email1" class="col-sm-3 control-label">Email:</label>
+                                        <div class="col-sm-3">
+                                            <input type="email" class="form-control inputstl" id="email1" value="dovankien89@gmail.com">
+                                        </div>
+
+                                        <div class="col-sm-2">
+                                            <div class="container">
+
+                                                <!-- Trigger the modal with a button -->
+                                                <button type="button" class="btn btn-default btn-file chinhsua" data-toggle="modal" data-target="#edit_email">Chỉnh sửa</button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="edit_email" role="dialog">
+                                                    <div class="modal-dialog">
+
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+
+                                                            <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <label for="email">Email:</label>
+                                                                    <input type="email" class="form-control" id="email">
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-info" data-dismiss="modal">Đóng</button>
+                                                                <button type="button" class="btn btn-info" data-dismiss="modal">Lưu</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password1" class="col-sm-3 control-label">Mật khẩu:</label>
+                                        <div class="col-sm-5">
+                                            <input type="password" class="form-control inputstl" id="password1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address1" class="col-sm-3 control-label">Số điện thoại:</label>
+                                        <div class="col-sm-5">
+                                            <input type="email" class="form-control inputstl" id="mobile" value="0947247133">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address1" class="col-sm-3 control-label">Địa chỉ:</label>
+                                        <div class="col-sm-5">
+                                            <input type="email" class="form-control inputstl" id="address1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address1" class="col-sm-3 control-label">Tên Ngân Hàng:</label>
+                                        <div class="col-sm-5">
+                                            <input type="email" class="form-control inputstl" id="address1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address1" class="col-sm-3 control-label">Số tài khoản Ngân Hàng:</label>
+                                        <div class="col-sm-5">
+                                            <input type="email" class="form-control inputstl" id="address1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-4">
+                                            <button type="submit" class="btn btn-lg btn-block btn-info" id="save">Lưu thông tin</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div> 
+                        </div>
+                        <!--chung chi-->
+                        <div class="row" id="cert">
+                            <h3>Chứng chỉ của bạn</h3><br>
+                            <div class="col-sm-4">
+                                <img src="img/certi1.jpg">
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="img/certi2.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
